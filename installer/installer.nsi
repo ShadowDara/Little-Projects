@@ -130,7 +130,7 @@ Section "Install"
 
   # ---- PATH hinzufügen ----
   ReadRegStr $0 HKCU "Environment" "Path"
-  StrCpy $1 "$INSTDIR"
+  StrCpy $1 "$INSTDIR\wrapperbin"
   Push $0
   Push $1
   Call AddToPath

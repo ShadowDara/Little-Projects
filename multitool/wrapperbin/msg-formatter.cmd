@@ -3,4 +3,4 @@
 @REM Shortcut to start the multitool
 
 cd /d "%~dp0"
-"../multitool.bat" %*
+"../msg-formatter/start.bat" %*
