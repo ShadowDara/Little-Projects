@@ -14,4 +14,7 @@ dapi_net.download_file("https://github.com/ShadowDara/msg-formatter/releases/dow
 dapi_io.unzip("multitool/msg-formatter.zip", "multitool/msg-formatter")
 
 -- add Touch Windows
-dapi_net.download_file("https://github.com/ShadowDara/dotfiles/releases/download/w-touch-0.0.0/touch-windows.exe", "touch.exe")
+dapi_net.download_file("https://github.com/ShadowDara/dotfiles/releases/download/w-touch-0.0.0/touch-windows.exe", "multitool/wrapperbin/touch.exe")
+
+-- add Path Viewer Windows
+dapi_net.download_file("https://github.com/ShadowDara/Path-Viewer/releases/download/0.0.1/paths.exe", "mutiltool/wrapperbin/paths.exe")
