@@ -43,8 +43,7 @@ Section "Uninstall"
   # Verzeichnis löschen
   RMDir "$INSTDIR"
 
-  ; Löscht das docs rekursiv
-  RMDir /r "$INSTDIR\docs"
+  RMDir /r "$INSTDIR\msg-formatter"
 
   # Delete Both Directories
   RMDir "$LOCALAPPDATA\@shadowdara"
@@ -131,8 +130,13 @@ Section "Install"
   CreateDirectory "$INSTDIR"
 
   ; Rekursiv alle Dateien und Ordner einbinden
+  CreateDirectory "$INSTDIR\msg-formatter"
   SetOutPath "$INSTDIR\msg-formatter"
   File /r "..\multitool\msg-formatter\*.*"
+
+  CreateDirectory "$INSTDIR\wrapperbin"
+  SetOutPath "$INSTDIR\wrapperbin"
+  File /r "..\multitool\wrapperbin\*.*"
 
   # Kopiere Datei(en) ins Zielverzeichnis
   SetOutPath "$INSTDIR"
