@@ -29,29 +29,15 @@ Page instfiles
 # Uninstaller
 # -------------------------------
 Section "Uninstall"
-
-  # Dateien löschen
-  Delete "$INSTDIR\luajit.exe"
-  Delete "$INSTDIR\README.md"
-  Delete "$INSTDIR\CHANGELOG.md"
-  Delete "$INSTDIR\LICENSE"
-  Delete "$INSTDIR\Uninstall.exe"
-  Delete "$INSTDIR\luajitdocs"
-  Delete "$INSTDIR\luajitdocs.cmd"
-  Delete "$INSTDIR\luajitdocs.lua"
-
-  # Verzeichnis löschen
-  RMDir "$INSTDIR"
-
-  RMDir /r "$INSTDIR\msg-formatter"
+  RMDir /r "$INSTDIR"
 
   # Delete Both Directories
   RMDir "$LOCALAPPDATA\@shadowdara"
 
-  Delete "$DESKTOP\luajit.lnk"
-  Delete "$SMPROGRAMS\Luajit\Uninstall.lnk"
-  Delete "$SMPROGRAMS\Luajit\luajit.lnk"
-  RMDir "$SMPROGRAMS\Luajit"
+  Delete "$DESKTOP\multitool.lnk"
+  Delete "$SMPROGRAMS\tools\Uninstall.lnk"
+  Delete "$SMPROGRAMS\tools\multitool.lnk"
+  RMDir "$SMPROGRAMS\tools"
 
   ; Read current PATH from registry
   ReadRegStr $0 HKCU "Environment" "Path"
@@ -88,7 +74,7 @@ Section "Uninstall"
   ${EndIf}
 
   # Entferne Uninstaller-Eintrag aus der Registry
-  DeleteRegKey HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\LuajitInstaller"
+  DeleteRegKey HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\MultitoolInstaller"
 
 SectionEnd
 
@@ -150,14 +136,14 @@ Section "Install"
   Call AddToPath
 
   # Create Startmenu Directory
-  CreateDirectory "$SMPROGRAMS\Luajit"
+  CreateDirectory "$SMPROGRAMS\tools"
 
   # Shortcuts
-  CreateShortCut "$SMPROGRAMS\Luajit\luajit.lnk" "$INSTDIR\luajit.exe"
-  CreateShortCut "$SMPROGRAMS\Luajit\Uninstall.lnk" "$INSTDIR\Uninstall.exe"
+  CreateShortCut "$SMPROGRAMS\tools\luajit.lnk" "$INSTDIR\multitool.bat"
+  CreateShortCut "$SMPROGRAMS\tools\Uninstall.lnk" "$INSTDIR\Uninstall.exe"
 
   ; Desktop Shortcut
-  CreateShortCut "$DESKTOP\luajit.lnk" "$INSTDIR\luajit.exe" "" "$INSTDIR\luajit.ico"
+  CreateShortCut "$DESKTOP\multitool.lnk" "$INSTDIR\multitool.bat" "" "$INSTDIR\multitool.ico"
 
   # ---- Uninstaller schreiben ----
   WriteUninstaller "$INSTDIR\Uninstall.exe"
