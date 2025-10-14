@@ -18,3 +18,7 @@ dapi_net.download_file("https://github.com/ShadowDara/dotfiles/releases/download
 
 -- add Path Viewer Windows
 dapi_net.download_file("https://github.com/ShadowDara/Path-Viewer/releases/download/0.0.1/paths.exe", "mutiltool/wrapperbin/paths.exe")
+
+-- Jar Downloader
+
+-- Video Converter
