@@ -1,0 +1,38 @@
+# Metals (Scala Language Server)
+.metals/
+.metals-build/
+
+# Bloop (Build Server for Scala)
+.bloop/
+
+# sbt
+target/
+project/target/
+project/project/
+lib_managed/
+src_managed/
+.sbt/
+.history
+.cache/
+.classpath
+.settings/
+.worksheet/
+
+# sbt logs & ivy cache
+sbt.log
+logs/
+*.log
+.ivy2/
+coursier/
+global.sbt
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Betriebssystem-Dateien
+.DS_Store
+Thumbs.db
