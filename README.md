@@ -1,14 +1,12 @@
-# Tools
+# Little Projects
 
-a list of my self written tools which i dont want to save in a
-whole repository
+This Repository is a Collection / Archive for little, small or short
+projects.
 
-### More Infos
+The List is alphabetical and after the name there is a Date for the
+last edit Time of the project
 
-- [Dotfiles](https://github.com/shadowdara/dotfiles)
-
-
-to build the multitool installer:
-```bat
-installer/prepare.cmd
-```
+- [NotenPunkteUmrechner](NotenPunkteUmrechner/README.md) - *2025*
+- [open_mingw](open_mingw/README.md) - *2025*
+- [touch-windows](touch-windows/README.md) - *2025*
+- [wt](wt/README.md) - *2025*
