@@ -11,5 +11,6 @@ last edit Time of the project
 - [open_mingw](open_mingw/README.md) - *2025*
 - [Slothbytes-Scala](Slothbytes-Scala/README.md) - *2025*
 - [Stylish-404-Page](Stylish-404-Page/README.md) - *2025*
+- [Tauri-Youtube-Web-App](Tauri-Youtube-Web-App/README.md) - *2025*
 - [touch-windows](touch-windows/README.md) - *2025*
 - [wt](wt/README.md) - *2025*
